@@ -1,0 +1,129 @@
+.ik-product-landing {
+  @media (max-width: 767px) {
+    padding: 0 10px;
+  }
+  .landing-container {
+    max-width: 915px;
+    margin: 0 auto;
+    .landing-title {
+      font-size: 82px;
+      line-height: 95%;
+      text-align: center;
+      @include mobile {
+        font-size: 50px;
+        line-height: 60px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+    }
+    .landing-text {
+      display: block;
+      @include desktop {
+        margin-top: 30px;
+        max-width: 765px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      p {
+        font-size: 15px;
+        line-height: 150%;
+        @include mobile {
+          font-size: 14px;
+          line-height: 150%;
+        }
+      }
+    }
+    .line-wrapper {
+      display: flex;
+      margin-top: 60px;
+      justify-content: center;
+      align-items: center;
+      @include mobile {
+        flex-direction: column-reverse;
+        margin-top: 20px;
+      }
+      .item_wrap {
+        @include mobile {
+          width: 100%;
+        }
+        .line_item {
+          position: relative;
+          &:last-child {
+            h2 {
+              margin-bottom: 0 !important;
+            }
+          }
+          h2 {
+            font-size: 18px;
+            line-height: 150%;
+            padding-bottom: 14px;
+            margin-bottom: 45px;
+            border-bottom: 1px solid #000;
+            @include desktop {
+              min-width: 500px;
+            }
+            @include mobile {
+              font-size: 13px;
+              line-height: 16px;
+              padding-bottom: 12px;
+              margin-bottom: 22px;
+            }
+            
+            &::before {
+              content: "";
+              width: 8px;
+              height: 8px;
+              background-color: #000;
+              position: absolute;
+              left: 0px;
+              bottom: 0;
+              transform: translateY(50%);
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+      .img_wrap {
+        img, video {
+          max-width: 245px;
+        }
+        video {
+          @include desktop {
+            margin-left: 60px;
+          }
+        }
+      }
+    }
+  }
+  .landing-img {
+    margin-top: 120px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+#shopify-section-ik-landing-newstyle {
+  .landing-title {
+    @include mobile {
+      font-size: 45px;
+      line-height: 50px;
+    }
+  }
+  .landing-wrapper {
+    .img_slider {
+      margin-top: 90px;
+      display: inline-grid;
+      @include mobile {
+        margin-top: 50px;
+      }
+      .img_item {
+        padding: 0 15px;
+        @include mobile {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}

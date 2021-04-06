@@ -1,0 +1,48 @@
+#marquee_1 {
+  h2 {
+    font-size: 24px;
+    line-height: 95%;
+    padding: 30px 0;
+    margin: 0;
+    overflow: hidden;
+    @include mobile {
+    }
+  }
+}
+
+#marquee_2 {
+  h2 {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 20px 0;
+    margin: 0;
+    background-color: #dad4c6;
+    overflow: hidden;
+    span {
+      @include desktop {
+        margin-right: 0;
+      }
+    }
+    @include mobile {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+#product_marquee {
+  h2 {
+    font-size: 24px;
+    line-height: 95%;
+    padding: 35px 0;
+    margin: 0;
+    background-color: #fff;
+    border-top: 1px solid #1d1d1d;
+    border-bottom: 1px solid #1d1d1d;
+    overflow: hidden;
+    @include mobile {
+      font-size: 18px;
+      line-height: 22px;
+      padding: 20px 0;
+    }
+  }
+}

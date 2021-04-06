@@ -1,0 +1,117 @@
+.home-slider-wrapper {
+  @include mobile {
+    padding: 0 15px;
+  }
+  .title-wrapper {
+    .section-title {
+      font-size: 86px;
+      line-height: 95%;
+      margin-bottom: 40px;
+      @include mobile {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .ingre_button {
+    position: relative;
+    top: 30px;
+    font-size: 18px;
+    line-height: 150%;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    @include mobile {
+      border-bottom: 1px solid #000;
+    }
+    &:hover {
+      text-decoration: unset;
+    }
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+  .main-pane {
+    .slick-list {
+      padding-left: 0 !important;
+    }
+    .slick-slide {
+      margin-right: 30px;
+      @include mobile {
+        margin-right: 10px;
+      }
+      & > div:not(:last-child) {
+        margin-bottom: 30px;
+        @include mobile {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .slick-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 22px;
+      position: absolute;
+      left: auto;
+      top: auto;
+      bottom: -35px;
+      right: 0;
+      transform: translate(0);
+      transform: translateY(100%);
+      &::before {
+        display: none;
+      }
+      @include mobile {
+        svg {
+          width: 30px;
+        }
+      }
+      &.slick-prev {
+        right: 70px;
+        @include mobile {
+          right: 45px;
+        }
+      }
+    }
+    .panel-horizontal {
+      padding: 40px;
+      max-width: 444px !important;
+      background: #fff;
+      padding: 40px;
+      @include mobile {
+        max-width: unset !important;
+      }
+      .item-title {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 20px;
+        @include mobile {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+      .item-image {
+        border-radius: 50%;
+        max-width: 190px;
+        max-height: 190px;
+        @include mobile {
+          max-width: 129px;
+          max-height: 129px;
+        }
+      }
+      .item-text {
+        font-size: 15px;
+        line-height: 150%;
+        p {
+          margin-top: 20px;
+          @include mobile {
+            font-size: 14px;
+            line-height: 150%;
+          }
+        }
+      }
+    }
+  }
+}
