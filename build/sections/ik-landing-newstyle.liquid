@@ -5,14 +5,22 @@
   <div class="landing-container">
     <h1 class="landing-title">{{ set.title }}</h1>
     <span class="landing-text">{{ set.text }}</span>
-  </div>
-  <div class="img_slider"> 
-    {% for block in section.blocks %}
-    {% assign bset = block.settings %}
-    <div class="img_item">
-      <img src="{{ bset.image | img_url: '1000x' }}" alt="{{ bset.image.alt }}">
-    </div> 
-    {% endfor %}
+    <div class="line-wrapper">
+      <div class="item_wrap"> 
+        {% for block in section.blocks %}
+        {% assign bset = block.settings %}
+        <div class="line_item">
+          <h2>{{ bset.title }}</h2>
+        </div> 
+        {% endfor %}
+      </div>
+      <div class="img_wrap">
+        <!-- <img src="{{ set.image | img_url: '1000x' }}" alt="{{ set.image.alt }}"> -->
+        <video playsinline autoplay loop muted>
+          <source type="video/mp4" src="https://cdn.shopify.com/s/files/1/0531/1555/1940/files/a.mp4?v=1617171497" />
+        </video>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -94,6 +102,11 @@
       "type": "richtext",
       "id": "text",
       "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
     }
   ],
   "blocks": [
@@ -102,9 +115,9 @@
       "name": "Item",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
+          "type": "text",
+          "id": "title",
+          "label": "Title"
         }
       ]
     }
