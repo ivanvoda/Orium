@@ -50,8 +50,8 @@ a:hover:not(.btn) {
       .desktop_product_info {
         h1.title {
           margin-top: 35px;
-          text-align: center;
           margin-bottom: 20px;
+          text-align: center;
         }
         .product_description {
           text-align: center;
@@ -373,12 +373,14 @@ a:hover:not(.btn) {
     font-size: 42px;
     line-height: 51px;
     margin-bottom: 20px;
+    text-align: center;
   }
   .product_description {
     font-size: 15px;
     line-height: 150%;
     color: #1d1d1d;
     margin-bottom: 40px;
+    text-align: center;
   }
   #addToCartForm {
     padding: unset;
@@ -437,4 +439,20 @@ a:hover:not(.btn) {
 
 // =================Product New style================
 #product_newstyle {
+  .ik-subscription-wrap {
+    #subscription_item {
+      @include desktop {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        .variant_wrap.roller {
+          border-top: none;
+          border-left: 1px solid #000;
+        }
+      }
+      .variant_wrap {
+        display: flex;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
