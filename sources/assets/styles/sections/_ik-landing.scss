@@ -89,6 +89,9 @@
           max-width: 245px;
         }
         video {
+          @include mobile {
+            margin-bottom: 20px;
+          }
           @include desktop {
             margin-left: 60px;
           }

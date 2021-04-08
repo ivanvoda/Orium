@@ -445,12 +445,19 @@ a:hover:not(.btn) {
         display: grid;
         grid-template-columns: 60% 40%;
         .variant_wrap.roller {
+          display: flex;
           border-top: none;
           border-left: 1px solid #000;
+          &::before {
+            display: none;
+          }
+          select {
+            padding-left: 75px;
+            background-position-x: calc(100% - 75px);
+          }
         }
       }
       .variant_wrap {
-        display: flex;
         text-transform: uppercase;
       }
     }

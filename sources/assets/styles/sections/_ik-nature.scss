@@ -105,3 +105,11 @@
     }
   }
 }
+
+#product_newstyle {
+  .nature-wrapper {
+    & > img {
+      width: 100%;
+    }
+  }
+}

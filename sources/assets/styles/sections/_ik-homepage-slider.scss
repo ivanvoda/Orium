@@ -115,3 +115,17 @@
     }
   }
 }
+
+#product_newstyle {
+  .home-slider-wrapper {
+    .main-pane {
+      .panel-horizontal {
+        .item-image {
+          border-radius: unset;
+          max-width: unset;
+          max-height: unset;
+        }
+      }
+    }
+  }
+}

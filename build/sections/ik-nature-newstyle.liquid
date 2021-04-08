@@ -1,0 +1,165 @@
+{% comment %} ATTENTION!!! This is compiled version of ik-nature-newstyle.liquid and it is overriding automatically. You should use theme development tool and sources\sections\ik-nature-newstyle.liquid file to code and save your changes. {% endcomment %}{% assign set = section.settings %}
+{% render 'ea-section-styles', section: section %}
+
+<div class="nature-wrapper">
+  <div class="nature-inner-wrapper {% if set.image_pos == 'left' %}is-left {% else %}is-right{% endif %}">
+    <div class="left-pane">
+      <img class="nature-img" src="{{ section.settings.product_image | img_url : 'master' }}" />
+    </div>
+    <div class="right-pane">
+      <div class="right-pane-wrapper container">
+        <h1 class="nature-title">{{section.settings.prod_title}}</h1>
+        <span class="nature-text">{{ section.settings.text }}</span>
+        <div class="animated-bottom animated-delay-1">
+          {% render 'button', {
+            top: set.btntop,
+            id: section.id,
+            text: set.btn,
+            url: set.btnu,
+            class: 'add-to-cart m-long animated-bottom animated-delay-1 hero-button'
+          } %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="{{ set.top_image | img_url: '2000x' }}" alt="{{ set.top_image.alt }}">
+</div>
+
+{% schema %}
+{
+  "name": "Nature Subscription",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "label": "Show section",
+      "default": true
+    },
+
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "ptop",
+      "label": "Top spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom",
+      "label": "Bottom spacing desktop",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "ptop_mob",
+      "label": "Top spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "pbottom_mob",
+      "label": "Bottom spacing mobile",
+      "min": 0,
+      "unit": "px",
+      "max": 500,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "type": "image_picker",
+      "id": "top_image",
+      "label": "Top image"
+    },
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "sectionbg",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product  Image"
+    }, 
+    {
+      "type": "select",
+      "id": "image_pos",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "label": "Main image position"
+    },
+    {
+      "type": "text",
+      "id": "prod_title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "button"
+    },
+    {
+      "type": "range",
+      "id": "btntop",
+      "label": "Top spacing",
+      "min": -200,
+      "max": 200,
+      "step": 5,
+      "default": 45
+    },
+    {
+      "id": "btnu",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "btn",
+      "type": "text",
+      "label": "Button text",
+      "default": "SUBSCRIBE FOR £25.99"
+    }
+  ],
+  "presets": [
+  {
+    "category": "ik-section",
+    "name": "Nature"
+  }
+]
+
+}
+{% endschema %}

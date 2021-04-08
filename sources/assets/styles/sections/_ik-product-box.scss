@@ -1,9 +1,10 @@
 .ik-product-box {
   .landing-title {
-    font-size: 82px;
+    font-size: 86px;
     line-height: 95%;
-    max-width: 755px;
+    max-width: 955px;
     margin-bottom: 60px;
+    color: #FFF;
     @include mobile {
       font-size: 45px;
       line-height: 52px;
@@ -16,7 +17,7 @@
     background-color: #000;
     grid-gap: 1px;
     border: 1px solid #000;
-    max-width: 860px;
+    max-width: 1200px;
     @include mobile {
       grid-template-columns: 1fr;
     }
